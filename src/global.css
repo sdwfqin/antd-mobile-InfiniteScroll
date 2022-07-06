@@ -1,0 +1,65 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+
+/* 全局变量，使用var()方法引用 */
+:root {
+  /* 主题色*/
+  --primary-color: #0081cc;
+  --adm-color-primary: var(--primary-color);
+  /* 背景色*/
+  --amq-bg-color: #f5f5f5;
+  /* 前景色*/
+  --amq-fg-color: #fff;
+  /* 边距*/
+  --amq-padding-large: 20px;
+  --amq-padding-middle: 15px;
+  --amq-padding-small: 10px;
+  --amq-padding-mini: 5px;
+  /* 圆角*/
+  --amq-border-radius: 5px;
+  /* 字体*/
+  --amq-font-size-large: 18px;
+  --amq-font-size-middle: 16px;
+  --amq-font-size-main: 14px;
+  --amq-font-size-small: 12px;
+  --amq-font-size-mini: 11px;
+}
+
+/* 全局通用页面样式 */
+.amq-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.amq-page-top {
+  flex: 0;
+  background-color: var(--amq-fg-color);
+  border-bottom: solid 1px var(--adm-border-color);
+}
+
+.amq-page-container {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  width: 100%;
+  height: 0;
+  overflow: auto;
+  background-color: var(--amq-bg-color);
+}
+
+.amq-page-bottom {
+  flex: 0;
+  background-color: var(--amq-fg-color);
+  border-top: solid 1px var(--adm-border-color);
+}
